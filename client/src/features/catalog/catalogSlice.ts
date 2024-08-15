@@ -116,7 +116,7 @@ export const catalogSlice = createSlice({
       state.status = "idle";
       state.productsLoaded = true;
     });
-    builder.addCase(fetchProductsAsync.rejected, (state, action) => {
+    builder.addCase(fetchProductsAsync.rejected, (state) => {
       state.status = "idle";
     });
     builder.addCase(fetchProductAsync.pending, (state) => {
@@ -126,7 +126,7 @@ export const catalogSlice = createSlice({
       productsAdapter.upsertOne(state, action.payload);
       state.status = "idle";
     });
-    builder.addCase(fetchProductAsync.rejected, (state, action) => {
+    builder.addCase(fetchProductAsync.rejected, (state) => {
       state.status = "idle";
     });
     builder.addCase(fetchFilters.pending, (state) => {

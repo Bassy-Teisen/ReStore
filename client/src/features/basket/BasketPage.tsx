@@ -25,7 +25,7 @@ export default function BasketPage() {
     const dispatch = useAppDispatch();
 
     if (!basket)
-        return <Typography varieant="h3">Your basket is empoty</Typography>;
+        return <Typography variant="h3">Your basket is empty</Typography>;
 
     return (
         <>
